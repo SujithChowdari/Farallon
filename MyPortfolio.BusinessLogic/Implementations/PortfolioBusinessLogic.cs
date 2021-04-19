@@ -8,10 +8,10 @@ namespace MyPortfolio.BusinessLogic.Implementations
 {
     public class PortfolioBusinessLogic : IPortfolioBusinessLogic
     {
-        private IPortfolioRepository _PortfolioRepository;
-        public PortfolioBusinessLogic(IPortfolioRepository PortfolioRepository)
+        private IPortfolioRepository _portfolioRepository;
+        public PortfolioBusinessLogic(IPortfolioRepository portfolioRepository)
         {
-            _PortfolioRepository = PortfolioRepository;
+            _portfolioRepository = portfolioRepository;
         }
         /// <summary>
         /// Get all the Portfolio from the store
@@ -19,7 +19,7 @@ namespace MyPortfolio.BusinessLogic.Implementations
         /// <returns>Portfolio collection</returns>
         public async Task<List<Portfolio>> GetPortfolios()
         {
-            return await _PortfolioRepository.GetPortfolios();
+            return await _portfolioRepository.GetPortfolios();
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace MyPortfolio.BusinessLogic.Implementations
         /// <returns>Portfolio object</returns>
         public async Task<Portfolio> GetPortfolio(int id)
         {
-            return await _PortfolioRepository.GetPortfolio(id);
+            return await _portfolioRepository.GetPortfolio(id);
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace MyPortfolio.BusinessLogic.Implementations
         /// <returns></returns>
         public async Task Add(Portfolio newPortfolio)
         {
-            await _PortfolioRepository.Add(newPortfolio);
+            await _portfolioRepository.Add(newPortfolio);
         }
     }
 }

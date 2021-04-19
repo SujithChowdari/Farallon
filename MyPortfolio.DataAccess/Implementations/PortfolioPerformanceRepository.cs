@@ -9,10 +9,10 @@ namespace MyPortfolio.DataAccess.Implementations
 {
     public class PortfolioPerformanceRepository: IPortfolioPerformanceRepository
     {
-        private IStockInformationRepository _StockInformationRepository;
-        public PortfolioPerformanceRepository(IStockInformationRepository StockInformationRepository)
+        private IStockInformationRepository _stockInformationRepository;
+        public PortfolioPerformanceRepository(IStockInformationRepository stockInformationRepository)
         {
-            _StockInformationRepository = StockInformationRepository;
+            _stockInformationRepository = stockInformationRepository;
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace MyPortfolio.DataAccess.Implementations
             // Get PrevClose and Current price for each ticker/symbol
             foreach(var ticker in portfolioPerformances.Keys)
             {
-                var tickerStockData = await _StockInformationRepository.GetStockQuote(ticker);
+                var tickerStockData = await _stockInformationRepository.GetStockQuote(ticker);
                 if(tickerStockData != null)
                 {
                     portfolioPerformances[ticker].CurrentPrice = tickerStockData.CurrentPrice;
