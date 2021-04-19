@@ -20,3 +20,8 @@
 
 
 ## Screenshots:
+# Portfoilio List and Adding new portfolio
+![image](https://user-images.githubusercontent.com/33646640/115167221-4af00480-a0e9-11eb-92a6-7784fc547871.png)
+
+# Editing portfolio by double clicking it's name from list - opens Trades page
+![image](https://user-images.githubusercontent.com/33646640/115167236-64914c00-a0e9-11eb-80d9-432e7a2b91fc.png)
